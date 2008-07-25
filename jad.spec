@@ -3,9 +3,8 @@
 
 Name:           jad
 Version:        1.5.8e
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Java Decompiler
-
 License:        Distributable, free for non-commercial use
 Group:          Development/Languages
 URL:            http://www.kpdus.com/jad.html
@@ -14,6 +13,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:         %{_prefix}
 
 ExclusiveArch:  i386
+
 
 %description
 A Java decompiler.
@@ -25,6 +25,7 @@ chmod 644 Readme.txt
 
 
 %build
+# Nothing to do.
 
 
 %install
@@ -43,8 +44,11 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Fri Oct 06 2006 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> 1.5.8e-5
- - rebuilt for unwind info generation, broken in gcc-4.1.1-21
+* Thu Jul 24 2008 Conrad Meyer <konrad@tylerc.org> - 1.5.8e-6
+- Initial import into RPM Fusion.
+
+* Fri Oct 06 2006 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.5.8e-5
+- rebuilt for unwind info generation, broken in gcc-4.1.1-21
 
 * Tue Sep 19 2006 Ville Skyttä <ville.skytta at iki.fi> - 1.5.8e-4
 - Don't use BuildArch: i386, non-i386 buildsys can't make srpm out of it.
