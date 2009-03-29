@@ -3,7 +3,7 @@
 
 Name:           jad
 Version:        1.5.8e
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Java Decompiler
 License:        Distributable, free for non-commercial use
 Group:          Development/Languages
@@ -12,7 +12,11 @@ Source:         http://www.kpdus.com/jad/linux/jadlx158.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:         %{_prefix}
 
+%if 0%{?fedora} >= 11
+ExclusiveArch:  i586
+%else
 ExclusiveArch:  i386
+%endif
 
 
 %description
@@ -44,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Mar 29 2009 Julian Sikorski <belegdol@fedoraproject.org> - 1.5.8e-8
+- Fedora 11 is i586, not i386
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.5.8e-7
 - rebuild for new F11 features
 
