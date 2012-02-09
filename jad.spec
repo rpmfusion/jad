@@ -12,7 +12,7 @@ Source:         http://www.kpdus.com/jad/linux/jadlx158.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:         %{_prefix}
 
-%if 0%{?fedora} > 11 || 0{?rhel} >= 6
+%if 0%{?fedora} > 11 || 0%{?rhel} >= 6
 ExclusiveArch:  i686
 %else
 ExclusiveArch:  i386
