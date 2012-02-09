@@ -12,8 +12,8 @@ Source:         http://www.kpdus.com/jad/linux/jadlx158.zip
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:         %{_prefix}
 
-%if 0%{?fedora} >= 11
-ExclusiveArch:  i586
+%if 0%{?fedora} > 11 || 0{?rhel} >= 6
+ExclusiveArch:  i686
 %else
 ExclusiveArch:  i386
 %endif
@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.5.8e-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+- Fix default arch
 
 * Sun Mar 29 2009 Julian Sikorski <belegdol@fedoraproject.org> - 1.5.8e-8
 - Fedora 11 is i586, not i386
