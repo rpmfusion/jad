@@ -3,7 +3,7 @@
 
 Name:           jad
 Version:        1.5.8e
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Java Decompiler
 License:        Distributable, free for non-commercial use
 Group:          Development/Languages
@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Mar 25 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 1.5.8e-12
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Sun Aug 31 2014 Sérgio Basto <sergio@serjux.com> - 1.5.8e-11
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
 
