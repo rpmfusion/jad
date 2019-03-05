@@ -3,7 +3,7 @@
 
 Name:           jad
 Version:        1.5.8e
-Release:        16%{?dist}
+Release:        17%{?dist}
 Summary:        Java Decompiler
 License:        Distributable, free for non-commercial use
 Group:          Development/Languages
@@ -48,6 +48,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Mar 05 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.5.8e-17
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Sun Aug 19 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.5.8e-16
 - Rebuilt for Fedora 29 Mass Rebuild binutils issue
 
